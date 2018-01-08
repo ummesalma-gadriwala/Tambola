@@ -94,20 +94,25 @@ public class Ticket {
 	/**
 	 * Checks: Number of blanks = 4
 	 * 		   For each row, blanks + numbers = 9
+	 * 		   Number of rows = 3
 	 * @return Checks if the ticket is valid
 	 */
 	public boolean valid() {
 		String t = get("");
 		System.out.println(t);
-		String[] tArray = t.split("\n");
-		for (String s : tArray) {
-			String[] sArray = s.split(",");
-			int blank = 0;
-			if (sArray.length != 9) return false;
-			for (String ss : sArray) {
-				if (ss.equals("_")) blank++;
+		String[] rows = t.split("\n");
+		// 3 rows
+		if (rows.length != 3) return false;
+		for (String row : rows) {
+			String[] column = row.split(",");
+			int blanks = 0;
+			// 9 columns in each row
+			if (column.length != 9) return false;
+			for (String value : column) {
+				if (value.equals("_")) blanks++;
 			}
-			if (blank != 4) return false;
+			// 4 blanks in each row
+			if (blanks != 4) return false;
 		}
 		return true;
 	}
