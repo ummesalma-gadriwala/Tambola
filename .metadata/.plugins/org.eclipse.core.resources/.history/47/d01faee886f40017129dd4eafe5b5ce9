@@ -1,0 +1,70 @@
+package Tambola;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+
+/**
+ * @author Umme Salma Gadriwala
+ * Purpose: This generates a given quantity of distinct Tambola/Housie tickets and writes it to the tickets.csv file.
+ */
+public class ManyTickets {
+	static int quantity;
+	static Set<Ticket> ticketSet = new HashSet<Ticket>();
+	static ArrayList<Ticket> clone = new ArrayList<Ticket>();
+	
+	/**
+	 * 
+	 * @param quantity Number of tickets to generate
+	 * Purpose: Generates a given quantity of tickets and writes it to tickets.csv
+	 * How: Uses a hashset to ensure that no tickets are repeated
+	 */
+	public static void generate(int quantity) {
+		ManyTickets.quantity = quantity;
+		while (ticketSet.size() < quantity) {
+			Ticket t = new Ticket();
+			boolean result = ticketSet.add(t);
+			if (result) {
+				clone.add(t);
+			}
+		}
+		write();
+	}
+	
+	/** 
+	 * @return Tests if the generated tickets are unique by checking if a similar ticket exists in the clone array
+	 */
+	private static boolean test() {
+		for (Ticket t : ticketSet) {
+			clone.remove(t);
+			if (clone.contains(t)) return false;
+		}
+		return true;
+	}
+	
+	/**
+	 * Purpose: Writes the tickets to tickets.csv
+	 */
+	private static void write() {
+		try {
+			FileWriter fw = new FileWriter("tickets.csv");
+			fw.write(quantity + " tickets\n");
+			int q = 1;
+			for (Ticket t : ticketSet) {
+				fw.write("Ticket " + q + ":\n");
+				fw.write(t.get());
+				q++;
+			}	
+			fw.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args) {
+		ManyTickets.generate(200);
+		System.out.println(test());
+	}
+}

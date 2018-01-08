@@ -1,0 +1,21 @@
+package Tambola;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Card {
+	Ticket[] card;
+	
+	public Card(int tickets) {
+		card = new Ticket[tickets];
+		Set<Ticket> cardSet = new HashSet<Ticket>();
+		while (cardSet.size() < tickets) {
+			cardSet.add(new Ticket());
+		}
+	}
+
+	public String get() {
+		
+		return null;
+	}
+}

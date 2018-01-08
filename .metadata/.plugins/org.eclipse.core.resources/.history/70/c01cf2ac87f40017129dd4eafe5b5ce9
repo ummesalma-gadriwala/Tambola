@@ -1,0 +1,9 @@
+package Tambola;
+
+public class Card {
+	Ticket[] card;
+	
+	public Card() {
+		
+	}
+}

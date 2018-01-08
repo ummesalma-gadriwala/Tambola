@@ -1,0 +1,90 @@
+package Tambola;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+
+/**
+ * @author Umme Salma Gadriwala
+ * Purpose: This generates a given quantity of distinct Tambola/Housie cards and writes it to the tickets.csv file.
+ */
+public class Cards {
+	static int quantity;
+	static Set<Card> cardSet = new HashSet<Card>();
+	static ArrayList<Card> clone = new ArrayList<Card>();
+	
+	/**
+	 * 
+	 * @param quantity Number of cards to generate
+	 * Purpose: Generates a given quantity of cards and writes it to cards.csv
+	 * How: Uses a hash set to ensure that no cards are repeated
+	 * @param tickets Number of tickets in a card 
+	 */
+	public static void generate(int quantity, int tickets) {
+		Cards.quantity = quantity;
+		while (cardSet.size() < quantity) {
+			Card c = new Card(tickets);
+			boolean result = cardSet.add(c);
+			if (result) {
+				clone.add(c);
+			}
+		}
+		write();
+		valid();
+	}
+	
+	/** 
+	 * @return Tests if the generated tickets are unique by checking if a similar ticket exists in the clone array
+	 */
+	private static boolean test() {
+		for (Card c : cardSet) {
+			clone.remove(c);
+			if (clone.contains(c)) return false;
+		}
+		return true;
+	}
+	
+	/**
+	 * Purpose: Writes the tickets to tickets.csv
+	 */
+	private static void write() {
+		try {
+			FileWriter fw = new FileWriter("cards.csv");
+			fw.write(quantity + " cards\n");
+			int q = 1;
+			for (Card c : cardSet) {
+				fw.write("\nCard " + q + ":\n");
+				fw.write(c.get("	"));
+				q++;
+			}	
+			fw.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private static void valid() {
+		try {
+			FileWriter fw = new FileWriter("test.txt");
+			fw.write("Distinct cards: " + test());
+			fw.write(quantity + " cards\n");
+			int q = 1;
+			for (Card c : cardSet) {
+				fw.write("\nCard " + q + ":\n");
+				fw.write("" + c.valid());
+				q++;
+			}	
+			fw.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args) {
+//		System.out.println(new Ticket().valid());
+		Cards.generate(200, 3);
+		System.out.println(test());
+	}
+}
