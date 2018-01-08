@@ -99,7 +99,6 @@ public class Ticket {
 	 */
 	public boolean valid() {
 		String t = get("");
-		System.out.println(t);
 		String[] rows = t.split("\n");
 		// 3 rows
 		if (rows.length != 3) return false;
@@ -108,8 +107,52 @@ public class Ticket {
 			int blanks = 0;
 			// 9 columns in each row
 			if (column.length != 9) return false;
+			int i = 0;
 			for (String value : column) {
-				if (value.equals("_")) blanks++;
+				if (value.equals("_")) {
+					blanks++;
+				} else {
+					int number = Integer.parseInt(value);
+					switch (i) {
+					case 0:
+						if (!(1 <= number && number <= 9))
+							return false;
+						break;
+					case 1:
+						if (!(10 <= number && number <= 19))
+							return false;
+						break;
+					case 2:
+						if (!(20 <= number && number <= 29))
+							return false;
+						break;
+					case 3:
+						if (!(30 <= number && number <= 39))
+							return false;
+						break;
+					case 4:
+						if (!(40 <= number && number <= 49))
+							return false;
+						break;
+					case 5:
+						if (!(50 <= number && number <= 59))
+							return false;
+						break;
+					case 6:
+						if (!(60 <= number && number <= 69))
+							return false;
+						break;
+					case 7:
+						if (!(70 <= number && number <= 79))
+							return false;
+						break;
+					case 8:
+						if (!(80 <= number && number <= 90))
+							return false;
+						break;
+					}
+				}
+				i++;
 			}
 			// 4 blanks in each row
 			if (blanks != 4) return false;

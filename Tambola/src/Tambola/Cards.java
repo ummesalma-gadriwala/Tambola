@@ -32,6 +32,7 @@ public class Cards {
 			}
 		}
 		write();
+		valid();
 	}
 	
 	/** 
@@ -64,8 +65,24 @@ public class Cards {
 		}
 	}
 	
+	private static void valid() {
+		try {
+			FileWriter fw = new FileWriter("test.txt");
+			fw.write("Distinct cards: " + test() + "\n");
+			fw.write(quantity + " cards\n");
+			int q = 1;
+			for (Card c : cardSet) {
+				fw.write("Card " + q + ":\n");
+				fw.write("" + c.valid());
+				q++;
+			}	
+			fw.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	public static void main(String[] args) {
-//		System.out.println(new Ticket().valid());
 		Cards.generate(200, 3);
 		System.out.println(test());
 	}
