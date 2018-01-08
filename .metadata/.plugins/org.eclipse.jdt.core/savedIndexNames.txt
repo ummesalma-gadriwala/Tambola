@@ -10,7 +10,6 @@ INDEX VERSION 1.130+C:\Users\UMMESALMAGadriwala\Desktop\Tambola\Tambola\.metadat
 3145607036.index
 1056031855.index
 543409727.index
-862084535.index
 3608585563.index
 3982276604.index
 2816613229.index
