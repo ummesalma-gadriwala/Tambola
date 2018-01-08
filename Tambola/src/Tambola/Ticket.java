@@ -17,9 +17,7 @@ import java.util.Random;
  * A '_' on the ticket represents a blank space.
  */
 public class Ticket {
-	int[][] ticket = { { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, 
-					   { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, 
-					   { 0, 0, 0, 0, 0, 0, 0, 0, 0 } };
+	int[][] ticket = new int[3][9];
 	Random rand = new Random();
 
 	
@@ -56,14 +54,14 @@ public class Ticket {
 	 * Every 1 in each row is replaced with a valid row number.
 	 */
 	private void ticket() {
-		int min = 0;
+		int min = 1; int max = 9;
 		for (int i = 0; i < 9; i++) {
 			ArrayList<Integer> numbers = new ArrayList<Integer>();
 			int count = ticket[0][i] + ticket[1][i] + ticket[2][i];
 			while (count > 0) {
-				int num = rand.nextInt(10) + min;
+				int num = rand.nextInt(max - min + 1) + min;
 				while (numbers.contains(num)) {
-					num = rand.nextInt(10) + min;
+					num = rand.nextInt(9) + min;
 				}
 				numbers.add(num);
 				count--;
@@ -82,9 +80,36 @@ public class Ticket {
 				ticket[2][i] = numbers.get(index);
 				index++;
 			}
-			min += 10;
-			if (i == 8) min += 1;
+			
+			if (min == 1) {
+				min += 9; max += 10;
+			} else if (max == 79){
+				min += 10; max += 11;
+			} else { 
+				min += 10; max += 10;
+			}
 		}
+	}
+	
+	/**
+	 * Checks: Number of blanks = 4
+	 * 		   For each row, blanks + numbers = 9
+	 * @return Checks if the ticket is valid
+	 */
+	public boolean valid() {
+		String t = get("");
+		System.out.println(t);
+		String[] tArray = t.split("\n");
+		for (String s : tArray) {
+			String[] sArray = s.split(",");
+			int blank = 0;
+			if (sArray.length != 9) return false;
+			for (String ss : sArray) {
+				if (ss.equals("_")) blank++;
+			}
+			if (blank != 4) return false;
+		}
+		return true;
 	}
 	
 	@Override
@@ -114,9 +139,10 @@ public class Ticket {
 	}
 
 	/**
+	 * @param indent Indent for formatting purposes
 	 * @return Convert the Ticket to a string
 	 */
-	public String get() {
+	public String get(String indent) {
 		String p = "";
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 9; j++) {
