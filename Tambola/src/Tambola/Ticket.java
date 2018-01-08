@@ -7,14 +7,14 @@ import java.util.Random;
 
 /**
  * @author Umme Salma Gadriwala
- * Purpose: This class is a single 3x9 ticket for the popular board game, also known as Housie.
+ * Purpose: This class is a single 3x9 ticket for the popular board game, also known as Housie or Bingo.
  * According to Wikipedia, a typical Tambola ticket contains fifteen numbers, arranged in nine columns by three rows.
  * Each row contains five numbers and four blank spaces.
  * Each column contains either one, two or very rarely three, numbers such that:
  * 	*The first column contains numbers from 1 to 9,
  * 	*The second column numbers from 10 to 19,
  * 	*The third 20 to 29 and so on up until the last column, which contains numbers from 80 to 90.
- * A zero on the ticket represents a blank space.
+ * A '_' on the ticket represents a blank space.
  */
 public class Ticket {
 	int[][] ticket = { { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, 
@@ -120,9 +120,13 @@ public class Ticket {
 		String p = "";
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 9; j++) {
-				p = p + ticket[i][j] + ",";
+				if (ticket[i][j] == 0) {
+					p = p + "_,";
+				} else {
+					p = p + ticket[i][j] + ",";
+				}
 			}
-			p = p.substring(0, p.length()-1) + "\n";
+			p = p.substring(0, p.length() - 1) + "\n";
 		}
 		return p;
 	}
