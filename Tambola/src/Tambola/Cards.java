@@ -55,7 +55,7 @@ public class Cards {
 			fw.write(quantity + " cards\n");
 			int q = 1;
 			for (Card c : cardSet) {
-				fw.write("\nCard " + q + ":\n");
+				fw.write("\nCard " + q + "\n");
 				fw.write(c.get("	"));
 				q++;
 			}	
@@ -68,12 +68,11 @@ public class Cards {
 	private static void valid() {
 		try {
 			FileWriter fw = new FileWriter("test.txt");
-			fw.write("Distinct cards: " + test() + "\n");
-			fw.write(quantity + " cards\n");
+			fw.write(quantity + " distinct cards: " + test() + "\n");
 			int q = 1;
 			for (Card c : cardSet) {
-				fw.write("Card " + q + ":\n");
-				fw.write("" + c.valid());
+				fw.write("Card " + q + ": ");
+				fw.write(c.valid() + "\n");
 				q++;
 			}	
 			fw.close();
@@ -84,6 +83,6 @@ public class Cards {
 	
 	public static void main(String[] args) {
 		Cards.generate(200, 3);
-		System.out.println(test());
+//		System.out.println(test());
 	}
 }

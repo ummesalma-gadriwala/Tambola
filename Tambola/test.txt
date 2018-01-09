@@ -1,203 +1,201 @@
-Distinct cards: true
-200 cards
-Card 1:
-trueCard 2:
-trueCard 3:
-trueCard 4:
-trueCard 5:
-trueCard 6:
-trueCard 7:
-trueCard 8:
-trueCard 9:
-trueCard 10:
-trueCard 11:
-trueCard 12:
-trueCard 13:
-trueCard 14:
-trueCard 15:
-trueCard 16:
-trueCard 17:
-trueCard 18:
-trueCard 19:
-trueCard 20:
-trueCard 21:
-trueCard 22:
-trueCard 23:
-trueCard 24:
-trueCard 25:
-trueCard 26:
-trueCard 27:
-trueCard 28:
-trueCard 29:
-trueCard 30:
-trueCard 31:
-trueCard 32:
-trueCard 33:
-trueCard 34:
-trueCard 35:
-trueCard 36:
-trueCard 37:
-trueCard 38:
-trueCard 39:
-trueCard 40:
-trueCard 41:
-trueCard 42:
-trueCard 43:
-trueCard 44:
-trueCard 45:
-trueCard 46:
-trueCard 47:
-trueCard 48:
-trueCard 49:
-trueCard 50:
-trueCard 51:
-trueCard 52:
-trueCard 53:
-trueCard 54:
-trueCard 55:
-trueCard 56:
-trueCard 57:
-trueCard 58:
-trueCard 59:
-trueCard 60:
-trueCard 61:
-trueCard 62:
-trueCard 63:
-trueCard 64:
-trueCard 65:
-trueCard 66:
-trueCard 67:
-trueCard 68:
-trueCard 69:
-trueCard 70:
-trueCard 71:
-trueCard 72:
-trueCard 73:
-trueCard 74:
-trueCard 75:
-trueCard 76:
-trueCard 77:
-trueCard 78:
-trueCard 79:
-trueCard 80:
-trueCard 81:
-trueCard 82:
-trueCard 83:
-trueCard 84:
-trueCard 85:
-trueCard 86:
-trueCard 87:
-trueCard 88:
-trueCard 89:
-trueCard 90:
-trueCard 91:
-trueCard 92:
-trueCard 93:
-trueCard 94:
-trueCard 95:
-trueCard 96:
-trueCard 97:
-trueCard 98:
-trueCard 99:
-trueCard 100:
-trueCard 101:
-trueCard 102:
-trueCard 103:
-trueCard 104:
-trueCard 105:
-trueCard 106:
-trueCard 107:
-trueCard 108:
-trueCard 109:
-trueCard 110:
-trueCard 111:
-trueCard 112:
-trueCard 113:
-trueCard 114:
-trueCard 115:
-trueCard 116:
-trueCard 117:
-trueCard 118:
-trueCard 119:
-trueCard 120:
-trueCard 121:
-trueCard 122:
-trueCard 123:
-trueCard 124:
-trueCard 125:
-trueCard 126:
-trueCard 127:
-trueCard 128:
-trueCard 129:
-trueCard 130:
-trueCard 131:
-trueCard 132:
-trueCard 133:
-trueCard 134:
-trueCard 135:
-trueCard 136:
-trueCard 137:
-trueCard 138:
-trueCard 139:
-trueCard 140:
-trueCard 141:
-trueCard 142:
-trueCard 143:
-trueCard 144:
-trueCard 145:
-trueCard 146:
-trueCard 147:
-trueCard 148:
-trueCard 149:
-trueCard 150:
-trueCard 151:
-trueCard 152:
-trueCard 153:
-trueCard 154:
-trueCard 155:
-trueCard 156:
-trueCard 157:
-trueCard 158:
-trueCard 159:
-trueCard 160:
-trueCard 161:
-trueCard 162:
-trueCard 163:
-trueCard 164:
-trueCard 165:
-trueCard 166:
-trueCard 167:
-trueCard 168:
-trueCard 169:
-trueCard 170:
-trueCard 171:
-trueCard 172:
-trueCard 173:
-trueCard 174:
-trueCard 175:
-trueCard 176:
-trueCard 177:
-trueCard 178:
-trueCard 179:
-trueCard 180:
-trueCard 181:
-trueCard 182:
-trueCard 183:
-trueCard 184:
-trueCard 185:
-trueCard 186:
-trueCard 187:
-trueCard 188:
-trueCard 189:
-trueCard 190:
-trueCard 191:
-trueCard 192:
-trueCard 193:
-trueCard 194:
-trueCard 195:
-trueCard 196:
-trueCard 197:
-trueCard 198:
-trueCard 199:
-trueCard 200:
-true
+200 distinct cards: true
+Card 1: true
+Card 2: true
+Card 3: true
+Card 4: true
+Card 5: true
+Card 6: true
+Card 7: true
+Card 8: true
+Card 9: true
+Card 10: true
+Card 11: true
+Card 12: true
+Card 13: true
+Card 14: true
+Card 15: true
+Card 16: true
+Card 17: true
+Card 18: true
+Card 19: true
+Card 20: true
+Card 21: true
+Card 22: true
+Card 23: true
+Card 24: true
+Card 25: true
+Card 26: true
+Card 27: true
+Card 28: true
+Card 29: true
+Card 30: true
+Card 31: true
+Card 32: true
+Card 33: true
+Card 34: true
+Card 35: true
+Card 36: true
+Card 37: true
+Card 38: true
+Card 39: true
+Card 40: true
+Card 41: true
+Card 42: true
+Card 43: true
+Card 44: true
+Card 45: true
+Card 46: true
+Card 47: true
+Card 48: true
+Card 49: true
+Card 50: true
+Card 51: true
+Card 52: true
+Card 53: true
+Card 54: true
+Card 55: true
+Card 56: true
+Card 57: true
+Card 58: true
+Card 59: true
+Card 60: true
+Card 61: true
+Card 62: true
+Card 63: true
+Card 64: true
+Card 65: true
+Card 66: true
+Card 67: true
+Card 68: true
+Card 69: true
+Card 70: true
+Card 71: true
+Card 72: true
+Card 73: true
+Card 74: true
+Card 75: true
+Card 76: true
+Card 77: true
+Card 78: true
+Card 79: true
+Card 80: true
+Card 81: true
+Card 82: true
+Card 83: true
+Card 84: true
+Card 85: true
+Card 86: true
+Card 87: true
+Card 88: true
+Card 89: true
+Card 90: true
+Card 91: true
+Card 92: true
+Card 93: true
+Card 94: true
+Card 95: true
+Card 96: true
+Card 97: true
+Card 98: true
+Card 99: true
+Card 100: true
+Card 101: true
+Card 102: true
+Card 103: true
+Card 104: true
+Card 105: true
+Card 106: true
+Card 107: true
+Card 108: true
+Card 109: true
+Card 110: true
+Card 111: true
+Card 112: true
+Card 113: true
+Card 114: true
+Card 115: true
+Card 116: true
+Card 117: true
+Card 118: true
+Card 119: true
+Card 120: true
+Card 121: true
+Card 122: true
+Card 123: true
+Card 124: true
+Card 125: true
+Card 126: true
+Card 127: true
+Card 128: true
+Card 129: true
+Card 130: true
+Card 131: true
+Card 132: true
+Card 133: true
+Card 134: true
+Card 135: true
+Card 136: true
+Card 137: true
+Card 138: true
+Card 139: true
+Card 140: true
+Card 141: true
+Card 142: true
+Card 143: true
+Card 144: true
+Card 145: true
+Card 146: true
+Card 147: true
+Card 148: true
+Card 149: true
+Card 150: true
+Card 151: true
+Card 152: true
+Card 153: true
+Card 154: true
+Card 155: true
+Card 156: true
+Card 157: true
+Card 158: true
+Card 159: true
+Card 160: true
+Card 161: true
+Card 162: true
+Card 163: true
+Card 164: true
+Card 165: true
+Card 166: true
+Card 167: true
+Card 168: true
+Card 169: true
+Card 170: true
+Card 171: true
+Card 172: true
+Card 173: true
+Card 174: true
+Card 175: true
+Card 176: true
+Card 177: true
+Card 178: true
+Card 179: true
+Card 180: true
+Card 181: true
+Card 182: true
+Card 183: true
+Card 184: true
+Card 185: true
+Card 186: true
+Card 187: true
+Card 188: true
+Card 189: true
+Card 190: true
+Card 191: true
+Card 192: true
+Card 193: true
+Card 194: true
+Card 195: true
+Card 196: true
+Card 197: true
+Card 198: true
+Card 199: true
+Card 200: true
