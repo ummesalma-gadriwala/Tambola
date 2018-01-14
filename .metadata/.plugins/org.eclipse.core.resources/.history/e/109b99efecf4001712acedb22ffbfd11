@@ -82,7 +82,7 @@ public class Cards {
 	}
 	
 	public static void main(String[] args) {
-		Cards.generate(250, 3);
-//		System.out.println(test());
+		Cards.generate(200, 3);
+		System.out.println(test());
 	}
 }
